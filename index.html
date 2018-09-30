@@ -34,10 +34,18 @@
 			cursor: default;
 		}
 	</style>
+	<script>
+		let clicks = 0;
+
+		let getNumOfClicks = function() {
+			let container = document.getElementById('clicks');
+			container.innerHTML = `You clicked ${++clicks} times`;
+		}
+	</script>
 </head>
 <body>
-	<div class=label>
-		<p>make memes, not war</p>
+	<div class=label onclick="getNumOfClicks()">
+		<p id="clicks">make memes, not war</p>
 	</div>
 </body>
 </html>
