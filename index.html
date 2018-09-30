@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<!-- made by realfavicongenerator.net -->
+	<!-- by realfavicongenerator.net -->
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -9,7 +9,6 @@
 	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
-
 	<title>Anton Styazhkin on the Internet</title>
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic');
@@ -39,22 +38,23 @@
 			position: absolute; 
 			top: 50%;
 			transform: translate(0, -50%);
-			font-size: 15pt;
+			font-size: 25pt;
 			cursor: default;
 		}
 	</style>
 	<script>
-		let clicks = 0;
+		let num = 0;
 
 		let getNumOfClicks = function() {
-			let container = document.getElementById('clicks');
-			container.innerHTML = `You clicked ${++clicks} times`;
+			let container = document.querySelector('#clicks');
+			container.innerHTML = `${++num}`;
+			container.title = `Ты нажал ${num} раз(а)`;
 		}
 	</script>
 </head>
 <body>
 	<div class=label onclick="getNumOfClicks()">
-		<p id="clicks">make memes, not war</p>
+		<p title="Нажмин на меня, детка" id="clicks">make memes, not war</p>
 	</div>
 </body>
 </html>
