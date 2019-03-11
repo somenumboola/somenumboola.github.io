@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Курсовая работа</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title>Курсовая работа</title>
+        <style>
+            #matrix-grid table td {
+                width: 50px;
+                overflow: hidden;
+                display: inline-block;
+                white-space: nowrap;
+            }
+        </style>
     </head>
     <body>
-        <div  id="matrix-grid">
-            <table>
-                <tr v-for="h in height">
-                    <td v-for="w in width">
-                        <input type="number">
-                    </td>
-                </tr>
-            </table>
-            <button v-on:click="incHeight" title="Увеличить высоту таблицы">+1</button>
-            <button v-on:click="decHeight" title="Уменьшить высоту таблицы">-1</button>
-            <button v-on:click="incWidth" title="Увеличить ширину таблицы">+1</button>
-            <button v-on:click="decWidth" title="Уменьшить ширину таблицы">-1</button>
+        <div id="matrix-grid">
+            <div class="container">            
+                <div class="row justify-content-md-center">
+                    <table>
+                        <tr v-for="h in height">
+                            <td v-for="w in width">
+                                <input type="number" class="form-control">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-auto">
+                        <button v-on:click="incHeight" title="Увеличить высоту таблицы">+1</button>
+                    </div>
+                    <div class="col-md-auto">
+                        <button v-on:click="decHeight" title="Уменьшить высоту таблицы">-1</button>
+                    </div>
+                    <div class="col-md-auto">
+                        <button v-on:click="incWidth" title="Увеличить ширину таблицы">+1</button>
+                    </div>
+                    <div class="col-md-auto">
+                        <button v-on:click="decWidth" title="Уменьшить ширину таблицы">-1</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <script>
             var matrixGrid = new Vue({
@@ -29,7 +52,7 @@
                     incHeight: function (event) {
                         if (this.height >= 10) {
                             alert('Достигнута максимальная высота')
-                            return;
+                            return
                         }
                         this.height += 1
                     },
@@ -37,7 +60,7 @@
                     decHeight: function (event) {
                         if (this.height <= 2) {
                             alert('Достигнута минимальная высота')
-                            return;
+                            return
                         }
                         this.height -= 1
                     },
@@ -45,7 +68,7 @@
                     incWidth: function (event) {
                         if (this.width >= 10) {
                             alert('Достигнута максимальная ширина')
-                            return;
+                            return
                         }
                         this.width += 1
                     },
@@ -53,7 +76,7 @@
                     decWidth: function (event) {
                         if (this.width <= 2) {
                             alert('Достигнута минимальная ширина')
-                            return;
+                            return
                         }
                         this.width -= 1
                     }
