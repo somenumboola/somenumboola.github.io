@@ -1,9 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>asdasd</title>
-</head>
-<body>
+    <head>
+        <title>Курсовая работа</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div  id="matrix-grid">
+            <table>
+                <tr v-for="h in height">
+                    <td v-for="w in width">
+                        <input type="number">
+                    </td>
+                </tr>
+            </table>
+            <button v-on:click="incHeight" title="Увеличить высоту таблицы">+1</button>
+            <button v-on:click="decHeight" title="Уменьшить высоту таблицы">-1</button>
+            <button v-on:click="incWidth" title="Увеличить ширину таблицы">+1</button>
+            <button v-on:click="decWidth" title="Уменьшить ширину таблицы">-1</button>
+        </div>
+        <script>
+            var matrixGrid = new Vue({
+                el: '#matrix-grid',
+                data: {
+                    height:     3,
+                    width:      3
+                },
+                methods: {
+                    incHeight: function (event) {
+                        if (this.height >= 10) {
+                            alert('Достигнута максимальная высота')
+                            return;
+                        }
+                        this.height += 1
+                    },
 
-</body>
+                    decHeight: function (event) {
+                        if (this.height <= 2) {
+                            alert('Достигнута минимальная высота')
+                            return;
+                        }
+                        this.height -= 1
+                    },
+
+                    incWidth: function (event) {
+                        if (this.width >= 10) {
+                            alert('Достигнута максимальная ширина')
+                            return;
+                        }
+                        this.width += 1
+                    },
+
+                    decWidth: function (event) {
+                        if (this.width <= 2) {
+                            alert('Достигнута минимальная ширина')
+                            return;
+                        }
+                        this.width -= 1
+                    }
+                }
+            })            
+        </script>
+    </body>
 </html>
