@@ -1,0 +1,30 @@
+html,
+body {
+    height: 100%;
+    margin: 0px;;
+}
+body {
+    display: flex;
+    align-items: center;
+    background-color: #faf9f9;
+}
+.container {
+    max-width: max-content;
+    margin: auto;
+}
+.list {
+    padding: 5px;
+}
+.list li {
+    display: inline;
+    padding: 5px;
+}
+.list li a {
+    text-decoration: none;
+}
+
+.footer {
+    position: fixed; 
+    bottom: 5px; 
+    right: 10px;
+}

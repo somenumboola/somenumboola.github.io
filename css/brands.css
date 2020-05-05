@@ -1,0 +1,28 @@
+/*
+    https://www.flaticon.com/authors/pixel-perfect
+
+    brands.css by Desulaid
+ */
+     
+ span[class$="-brand"] {
+    height: 40px;
+    width: 40px;
+    -webkit-transform: 10ms;
+    -moz-transform: 10ms;
+    transform: 10ms;
+ }
+
+ span[class$="-brand"]:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+ }
+
+.github-brand { content: url("brands/github.png"); }
+.instagram-brand { content: url("brands/instagram.png"); }
+.snapchat-brand { content: url("brands/snapchat.png"); }
+.soundcloud-brand { content: url("brands/soundcloud.png"); }
+.steam-brand { content: url("brands/steam.png"); }
+.telegram-brand { content: url("brands/telegram.png"); }
+.twitter-brand { content: url("brands/twitter.png"); }
+.VK-brand { content: url("brands/VK.png"); }
