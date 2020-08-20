@@ -2,8 +2,38 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Мои социальные сеточки</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Мои социальные сеточки</title>
+  <style>
+    li {
+    list-style-type: none;
+   }
+   ul {
+    margin-left: 0; 
+    padding-left: 0;
+   }
+  </style>
 </head>
-<body>
+<body>  
+	<div id="app">
+		<ul >
+      <li v-for="profile in profiles">
+        <a v-bind:href="profile.url">{{profile.name }}</a>
+      </li>
+    </ul>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        profiles: [
+          { name: 'VK', url: 'https://vk.com/id152967894'},
+          { name: 'Telegram', url: 'https://t.me/hochupoebachu'},
+          { name: 'Instagram', url: 'https://www.instagram.com/desulaid/?hl=ru'},
+          { name: 'Github', url: 'https://github.com/desulaid'}
+        ]
+      }
+    })
+	  </script>
 </body>
 </html>
