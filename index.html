@@ -5,78 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ссылки на мои социальные сети.">
   <meta name="author" content="Стяжкин Антон">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <title>Мои социальные сеточки</title>
-  <style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-  html,
-  body {
-    margin: 0;
-    padding: 5px;
-
-    font-family: 'Roboto', sans-serif;
-    background-color: #24292e;
-  }
-  li {
-    list-style-type: none;
-  }
-  ul {
-    margin-left: 0; 
-    padding-left: 0;
-  }
-  a {
-    color: #f1f8ff;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
   
-  a:hover {
-    color: #24292e;
-    background-color: #f1f8ff;
-  }
-
-  #app {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  @media screen {
-    * {
-      font-family: 'Roboto', sans-serif;
-      font-size: 66px;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    * {
-      font-size: 36px;
-    }
-  }
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link href="index.css" rel="stylesheet">
+  
+  <title>Мои социальные сеточки</title>
 </head>
 <body>  
-	<div id="app">
-		<ul >
+		<ul id="app">
       <li v-for="profile in profiles">
         <a v-bind:href="profile.url" target="_blank">{{profile.name }}</a>
       </li>
     </ul>
-  </div>
-
-  <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        profiles: [
-          { name: 'VK', url: 'https://vk.com/id152967894'},
-          { name: 'Telegram', url: 'https://t.me/hochupoebachu'},
-          { name: 'Instagram', url: 'https://www.instagram.com/desulaid/?hl=ru'},
-          { name: 'Spotify', url: 'https://open.spotify.com/user/2uq5uxac9mzr6yadjsjr8fk1f?si=luMO22GZR8KGQIe3J5ek4g'},
-          { name: 'and Github (:', url: 'https://github.com/desulaid'},
-        ]
-      }
-    })
-  </script>
+  <script src="index.js"></script>
 </body>
 </html>
