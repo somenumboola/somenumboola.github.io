@@ -11,12 +11,17 @@
   
   <title>Мои социальные сеточки</title>
 </head>
-<body>  
-		<ul id="app">
+<body> 
+  <section class="content">
+    <ul id="app">
       <li v-for="profile in profiles">
         <a v-bind:href="profile.url" target="_blank">{{profile.name }}</a>
       </li>
     </ul>
+  </section>
+  <footer>
+    <p>Да, этот кусок говна в <a href="https://github.com/desulaid/desulaid.github.io">открытом</a> доступе.</p>
+  </footer>
   <script src="index.js"></script>
 </body>
 </html>
