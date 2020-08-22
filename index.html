@@ -23,7 +23,7 @@
   <section class="content">
     <ul id="app">
       <li v-for="profile in profiles">
-        <a v-bind:href="profile.url" target="_blank">{{profile.name }}</a>
+        <a v-bind:href="profile.url" target="_blank" @mouseenter="profile.hover=true" @mouseleave="profile.hover=false">{{ profile.hover ? profile.name.split("").reverse().join("") : profile.name }}</a>
       </li>
     </ul>
   </section>
