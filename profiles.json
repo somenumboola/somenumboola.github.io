@@ -1,11 +1,6 @@
 {
     "profiles":[
       {
-        "name":"VK",
-        "url":"https://vk.com/somenumboola",
-        "hover":false
-      },
-      {
         "name":"Telegram",
         "url":"https://t.me/somenumboola",
         "hover":false
@@ -33,6 +28,11 @@
       {
         "name":"Clubhouse",
         "url":"https://clubber.one/@somenumboola",
+        "hover":false
+      },
+      {
+        "name":"VK",
+        "url":"https://vk.com/somenumboola",
         "hover":false
       },
       {
