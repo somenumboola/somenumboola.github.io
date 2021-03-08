@@ -9,6 +9,6 @@ var app = new Vue({
     { name: 'Savee.IT', url: 'https://savee.it/somenumboola/', hover: false},
     { name: 'ClubHouse', url: 'https://clubber.one/@somenumboola', hover: false},
     { name: 'VK', url: 'https://vk.com/somenumboola', hover: false},
-    { name: 'and Github (:', url: 'https://github.com/desulaid', hover: false}
+    { name: 'and Github (:', url: 'https://github.com/somenumboola', hover: false}
   ]
 }});
